@@ -1,0 +1,10 @@
+async function enableMic() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    console.log("Microphone access granted!");
+    // Use the stream for your AI or recording
+  } catch (err) {
+    console.error("Error accessing microphone: ", err);
+    alert("Please enable microphone permissions in your browser settings.");
+  }
+}
